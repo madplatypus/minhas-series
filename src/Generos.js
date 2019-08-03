@@ -28,7 +28,7 @@ const Generos = () => {
                 <td>{record.name}</td>
                 <td>
                     <button onClick={() => deleteGenero(record.id) }>Apagar</button>
-                    <button>Editar</button>
+                    <Link to={'/generos/' + record.id}>Editar</Link>
                 </td>
             </tr>
         )
