@@ -13,12 +13,23 @@ const Generos = () => {
             })
     }, [])
 
+    const deleteGenero = id => {
+        axios
+            .delete('api/genres/' + id)
+            .then(res => {
+                const filtrado = data.filter(item => item.id !== id)
+                setData(filtrado)
+            })
+    }
     const renderizaLinha = record => {
         return (
             <tr key={record.id}>
                 <th scope='row'>#{record.id}</th>
                 <td>{record.name}</td>
-                <td><button>+</button></td>
+                <td>
+                    <button onClick={() => deleteGenero(record.id) }>Apagar</button>
+                    <button>Editar</button>
+                </td>
             </tr>
         )
     }
@@ -33,6 +44,7 @@ const Generos = () => {
         </div>
         )
     }
+
 
     return (
         <div className='container'>
