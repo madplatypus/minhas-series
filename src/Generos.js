@@ -27,8 +27,8 @@ const Generos = () => {
                 <th scope='row'>#{record.id}</th>
                 <td>{record.name}</td>
                 <td>
-                    <button onClick={() => deleteGenero(record.id) }>Apagar</button>
-                    <Link to={'/generos/' + record.id}>Editar</Link>
+                    <button className='btn btn-danger' onClick={() => deleteGenero(record.id) }>Apagar</button>
+                    <Link className='btn btn-light' to={'/generos/' + record.id}>Editar</Link>
                 </td>
             </tr>
         )
