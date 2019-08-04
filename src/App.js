@@ -8,6 +8,7 @@ import {
 import Generos from './Generos'
 import NovoGenero from './NovoGenero'
 import EditarGenero from './EditarGenero'
+import Series from './Series'
 
 const Home = () =>{
   return <h1>Home</h1>
@@ -24,6 +25,7 @@ function App() {
           <Route path='/generos' exact component={Generos}/>
           <Route path='/generos/novo' exact component={NovoGenero}/>
           <Route path='/generos/:id' exact component={EditarGenero}/>
+          <Route path='/series/' exact component={Series}/>
           
         </Switch>
     </div>
