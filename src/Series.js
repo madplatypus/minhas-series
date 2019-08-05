@@ -28,7 +28,7 @@ const Series = () => {
                 <td>{record.name}</td>
                 <td>
                     <button className='btn btn-danger' onClick={() => deleteSerie(record.id) }>Apagar</button>
-                    <Link className='btn btn-light' to={'/Serie/' + record.id}>Editar</Link>
+                    <Link className='btn btn-light' to={'/series/' + record.id}>Editar</Link>
                 </td>
             </tr>
         )
@@ -38,7 +38,7 @@ const Series = () => {
         return(
             <div className='container'>
             <h1>Séries</h1>
-            <Link to='/serie/novo'>Nova série</Link>
+            <Link to='/series/novo'>Nova série</Link>
             <div className='alert alert-warning' role='alert'>
                 Nenhuma série criada
             </div>
@@ -49,8 +49,8 @@ const Series = () => {
 
     return (
         <div className='container'>
-            <h1>Série</h1>
-            <Link to='/serie/novo'>Nova série</Link>
+            <h1>Séries</h1>
+            <Link to='/series/novo'>Nova série</Link>
             <table className='table table-dark'>
                 <thead>
                     <tr>
